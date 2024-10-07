@@ -32,7 +32,7 @@ Trabalho 1 da cadeira de Gerenciamento de Configuração de Software.
   📖 RELATÓRIO E COMANDOS GIT E GITHub:
 </h2>
 
-<div>
+<p>
   
   <a href="https://brpucrs-my.sharepoint.com/:w:/g/personal/j_costa009_edu_pucrs_br/EdvMunRQNUBOo2GUtPL2V38BduohAbu9OdF5Rkl0rWj2MA?e=wWbh74" target="_blank">RELATÓRIO</a>
   
@@ -40,7 +40,7 @@ Trabalho 1 da cadeira de Gerenciamento de Configuração de Software.
 
   <a href="https://brpucrs-my.sharepoint.com/:w:/g/personal/j_costa009_edu_pucrs_br/EdiEdDcjYmtMkm7iGCU_5hQBg-bJTUUI5rS0pKtd4O3euQ?e=bDtIBe" target="_blank">UML DAS CLASSES</a>
   
-</div>
+</p>
 
 <br>
 <br>

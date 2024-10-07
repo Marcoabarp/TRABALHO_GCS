@@ -34,9 +34,11 @@ Trabalho 1 da cadeira de Gerenciamento de Configuração de Software.
 
 <div>
   
-  <a href="https://brpucrs-my.sharepoint.com/:w:/g/personal/j_costa009_edu_pucrs_br/EdvMunRQNUBOo2GUtPL2V38BduohAbu9OdF5Rkl0rWj2MA?e=wWbh74">RELATÓRIO</a>
+  <a href="https://brpucrs-my.sharepoint.com/:w:/g/personal/j_costa009_edu_pucrs_br/EdvMunRQNUBOo2GUtPL2V38BduohAbu9OdF5Rkl0rWj2MA?e=wWbh74" target="_blank">RELATÓRIO</a>
   
-  <a href="https://www.exemplo.com](https://brpucrs-my.sharepoint.com/:w:/r/personal/j_costa009_edu_pucrs_br/_layouts/15/Doc.aspx?sourcedoc=%7BC16F6FE7-5216-4129-89F1-ABAECAFB461B%7D&file=COMANDOS%20GIT%20E%20GIT%20HUB.docx&action=default&mobileredirect=true&DefaultItemOpen=1&ct=1728302586803&wdOrigin=OFFICECOM-WEB.MAIN.REC&cid=94cf12e0-2744-49eb-b6e9-84258f72d942&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=2bc7cca8-237e-4c0b-ae75-a3a98cf86d9b)">COMANDOS</a>
+  <a href="https://brpucrs-my.sharepoint.com/:w:/g/personal/j_costa009_edu_pucrs_br/Eedvb8EWUilBifGrrsr7RhsBMGbYX76SaF53QyeQnSGtTQ?e=P36LdW" target="_blank">COMANDOS</a>
+
+  <a href="https://brpucrs-my.sharepoint.com/:w:/g/personal/j_costa009_edu_pucrs_br/EdiEdDcjYmtMkm7iGCU_5hQBg-bJTUUI5rS0pKtd4O3euQ?e=bDtIBe" target="_blank">UML DAS CLASSES</a>
   
 </div>
 

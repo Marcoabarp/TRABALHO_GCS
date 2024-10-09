@@ -1,21 +1,29 @@
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Pedido{
 
-    private String funcionario;
-    private String departamento;
-    private String data;
-    private String data_conclusao;
-    private ArrayList<item> items = new ArrayList<>();
+    private int id;
+    private Funcionario funcionarioSolicitante;
+    private Departamento departamentoSolicitante;
+    private Date dataPedido;
+    private Date dataConclusao;
+    private StatusPedido status;
+    private List<Item> itens;
+    private double valorTotal;
 
-    public Pedido(String funcionario, String data, String data_conclusao, String departamento) {
-        this.funcionario = funcionario;
-        this.data = data;
-        this.data_conclusao = data_conclusao;
-        this.departamento = departamento;
-
-    }
-    public double calculatotal(int i){
+  public Pedido(int id, Funcionario funcionarioSolicitante, Departamento departamentoSolicitante) {
+      this.id = id;
+      this.funcionarioSolicitante = funcionarioSolicitante;
+      this.departamentoSolicitante = departamentoSolicitante;
+      this.dataPedido = new Date();
+      this.dataConclusao = null; //
+      this.itens = new ArrayList<>();
+      this.status = StatusPedido.ABERTO;
+      this.valorTotal = 0.0;
+  }
+  
+    public double calculaTotal(int i){
         double total = 0;
        for (int i =0; i<= items.size()) {
 
@@ -33,33 +41,9 @@ public class Pedido{
     }
 
 
-
-    public String getFuncionario() {
-                return funcionario;
-            }
-
-            public void setFuncionario(String funcionario) {
-            this.funcionario = funcionario;
-                 }
-
-    public ArrayList<item> getItems() {
-            return items;
-        }
-
-    public void setItems(ArrayList<item> items) {
-    this.items = items;
+    public String getId() {
+      return String.valueOf(id);
     }
-
-    public String getData_conclusao() {
-         return data_conclusao;
-    }
-
-        public void setData_conclusao(String data_conclusao) {
-        this.data_conclusao = data_conclusao;
-        }
-public void main() {
-}
-
 }
 
 

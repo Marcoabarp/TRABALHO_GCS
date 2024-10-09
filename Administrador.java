@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Date;
 
 public class Administrador extends Usuario {
    
@@ -23,6 +24,16 @@ public class Administrador extends Usuario {
             }
         }
         return pedidosPorData;
+    }
+
+    public List<Pedido> buscarPedidosPorFuncionario(List<Pedido> todosPedidos, Funcionario funcionario) {
+        List<Pedido> pedidosFuncionario = new ArrayList<>();
+        for (Pedido pedido : todosPedidos) {
+            if (pedido.getFuncionarioSolicitante().equals(funcionario)) {
+                pedidosFuncionario.add(pedido);
+            }
+        }
+        return pedidosFuncionario;
     }
 
 

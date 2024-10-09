@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03de9d46-8bf3-415c-ae4f-08bb18d57b72" name="Changes" comment="" />
+    <list default="true" id="03de9d46-8bf3-415c-ae4f-08bb18d57b72" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Departamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/Departamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pedido.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +35,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/departamento",
+    "git-widget-placeholder": "feature/metodos__departamento",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -58,7 +62,8 @@
       <option name="presentableId" value="Default" />
       <updated>1728428365454</updated>
       <workItem from="1728428366649" duration="361000" />
-      <workItem from="1728475298589" duration="647000" />
+      <workItem from="1728475298589" duration="1737000" />
+      <workItem from="1728477144423" duration="382000" />
     </task>
     <servers />
   </component>

@@ -9,16 +9,22 @@ public class Administrador extends Usuario {
     }
 
     public void avaliarPedido(Pedido pedido, boolean aprovado) {
-        if (aprovado) {
-            pedido.setStatus(StatusPedido.APROVADO);
+        if (pedido.getStatus() == StatusPedido.ABERTO) { // Só pode avaliar pedidos abertos
+            if (aprovado) {
+                pedido.setStatus(StatusPedido.APROVADO);
+                System.out.println("Pedido " + pedido.getId() + " aprovado.");
+            } else {
+                pedido.setStatus(StatusPedido.REPROVADO);
+                System.out.println("Pedido " + pedido.getId() + " reprovado.");
+            }
         } else {
-            pedido.setStatus(StatusPedido.REPROVADO);
+            System.out.println("Erro: O pedido já foi avaliado.");
         }
     }
 
-    public List<Pedido> listarPedidosPorData(Date dataInicio, Date dataFim) {
+    public List<Pedido> listarPedidosPorData(List<Pedido> todosPedidos, Date dataInicio, Date dataFim) {
         List<Pedido> pedidosPorData = new ArrayList<>();
-        for (Pedido pedido : Pedido.getTodosPedidos()) {
+        for (Pedido pedido : todosPedidos) {
             if (pedido.getDataPedido().after(dataInicio) && pedido.getDataPedido().before(dataFim)) {
                 pedidosPorData.add(pedido);
             }
@@ -35,6 +41,20 @@ public class Administrador extends Usuario {
         }
         return pedidosFuncionario;
     }
+
+    public List<Pedido> buscarPedidosPorDescricao(List<Pedido> todosPedidos, String descricao) {
+        List<Pedido> pedidosDescricao = new ArrayList<>();
+        for (Pedido pedido : todosPedidos) {
+            for (Item item : pedido.getItens()) {
+                if (item.getDescricao().contains(descricao)) {
+                    pedidosDescricao.add(pedido);
+                    break;
+                }
+            }
+        }
+        return pedidosDescricao;
+    }
+
 
 
 }

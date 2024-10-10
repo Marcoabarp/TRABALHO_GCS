@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Pedido{
 
@@ -23,25 +24,44 @@ public class Pedido{
       this.valorTotal = 0.0;
   }
 
-    public void adicionarItem(Item item) {
-        itens.add(item);
-        calcularValorTotal();
+    public int getId() {
+        return id;
     }
 
-    public double calcularValorTotal() {
-        valorTotal = 0;
-        for (Item item : itens) {
-            valorTotal += item.calcularTotal();
-        }
-        return valorTotal;
-    }
-
-    public List<Item> getItens() {
-        return itens;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Funcionario getFuncionarioSolicitante() {
         return funcionarioSolicitante;
+    }
+
+    public void setFuncionarioSolicitante(Funcionario funcionarioSolicitante) {
+        this.funcionarioSolicitante = funcionarioSolicitante;
+    }
+
+    public Departamento getDepartamentoSolicitante() {
+        return departamentoSolicitante;
+    }
+
+    public void setDepartamentoSolicitante(Departamento departamentoSolicitante) {
+        this.departamentoSolicitante = departamentoSolicitante;
+    }
+
+    public Date getDataPedido() {
+        return dataPedido;
+    }
+
+    public void setDataPedido(Date dataPedido) {
+        this.dataPedido = dataPedido;
+    }
+
+    public Date getDataConclusao() {
+        return dataConclusao;
+    }
+
+    public void setDataConclusao(Date dataConclusao) {
+        this.dataConclusao = dataConclusao;
     }
 
     public StatusPedido getStatus() {
@@ -52,21 +72,41 @@ public class Pedido{
         this.status = status;
     }
 
-    public Date getDataConclusao() {
-        return dataConclusao;
+    public List<Item> getItens() {
+        return itens;
     }
 
-    public void setDataConclusao(Date dataConclusao) {
-        this.dataConclusao = dataConclusao; // Método para definir a data de conclusão
+    public void setItens(List<Item> itens) {
+        this.itens = itens;
     }
 
     public double getValorTotal() {
-        return valorTotal; // Método para obter o valor total
+        return valorTotal;
     }
 
-    public String getId() {
-        return String.valueOf(id);
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
     }
+
+    public void adicionarItem(Item item) {
+
+        itens.add(item);
+        Integer quantidade = item.getQuantidade();
+
+        if(quantidade != 0 || quantidade != null) {
+            calcularValorTotal(quantidade);
+        }
+
+    }
+
+    public double calcularValorTotal(int quantidade) {
+
+        for (Item item : itens) {
+            valorTotal += item.calcularTotal(valorTotal, quantidade);
+        }
+        return valorTotal;
+    }
+
 }
 
 

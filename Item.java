@@ -4,7 +4,7 @@ public class Item extends Pedido{
     private int quantidade;
     private double total;
 
-    public Item(String descricao, double valorUnitario, int quantidade) {
+    public Item(String descricao, double valorUnitario, int quantidade, int id, Funcionario funcionarioSolicitante, Departamento departamentoSolicitante) {
         super(id, funcionarioSolicitante, departamentoSolicitante);
         this.descricao = descricao;
         this.valorUnitario = valorUnitario;

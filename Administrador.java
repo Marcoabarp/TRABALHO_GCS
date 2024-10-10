@@ -66,6 +66,18 @@ public class Administrador extends Usuario {
         }
     }
 
+    public void verEstatisticas(List<Pedido> todosPedidos) {
+        int totalPedidos = 0;
+        int pedidosAprovados = 0;
+        int pedidosReprovados = 0;
+        double valorTotalUltimos30Dias = 0;
+        int pedidosUltimos30Dias = 0;
+        Date hoje = new Date();
+        Pedido maiorPedidoAberto = null;
+
+    //ainda preciso adicionar mais mas to meio perdido do q fazer :( )
+    //já to vendo q isso n vai funcionar :O :O :O :O :O :O
+    }
 
 
 }

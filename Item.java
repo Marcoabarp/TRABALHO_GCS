@@ -1,8 +1,9 @@
-public class Item extends Pedido{
+public class Item {
     private String descricao;
     private double valorUnitario;
     private int quantidade;
     private double total;
+
 
     public Item(String descricao, double valorUnitario, int quantidade, int id, Funcionario funcionarioSolicitante, Departamento departamentoSolicitante) {
         super(id, funcionarioSolicitante, departamentoSolicitante);

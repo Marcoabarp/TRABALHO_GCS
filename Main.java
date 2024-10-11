@@ -125,7 +125,7 @@ public class Main {
             itens.add(item);
         }
     
-        Pedido pedido = new Pedido(pedidos.size() + 1, funcionario, itens);  // Correção aqui
+        Pedido pedido = new Pedido(pedidos.size() + 1, funcionario, (Departamento) itens);  // Correção aqui
         if (pedido.getValorTotal() <= funcionario.getDepartamento().getLimitePedido()) {
             pedidos.add(pedido);
             System.out.println("Pedido registrado com sucesso!");

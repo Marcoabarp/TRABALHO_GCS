@@ -4,15 +4,15 @@ public class Item {
     private int quantidade;
     private double total;
 
-
-    public Item(String descricao, double valorUnitario, int quantidade) {
-
-
     public Item(String descricao, double valorUnitario, int quantidade, int id, Funcionario funcionarioSolicitante, Departamento departamentoSolicitante) {
-        super(id, funcionarioSolicitante, departamentoSolicitante);
         this.descricao = descricao;
         this.valorUnitario = valorUnitario;
         this.quantidade = quantidade;
+        this.total = valorUnitario * quantidade;
+    }
+
+    public double getTotal() {
+        return total;
     }
 
     public String getDescricao() {
@@ -26,11 +26,7 @@ public class Item {
     public int getQuantidade() {
         return quantidade;
     }
-
-    public double getTotal() {
-        return total;
-    }
-
+    
     public double calcularTotal(double valorUnitario, int quantidade) {
         total = valorUnitario * quantidade;
         return total;
@@ -38,12 +34,7 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
-                "descricao='" + descricao + '\'' +
-                ", valorUnitario=" + valorUnitario +
-                ", quantidade=" + quantidade +
-                ", total=" + calcularTotal(valorUnitario, quantidade) + // Passa os parâmetros corretos
-                '}';
+        return descricao + " - Quantidade: " + quantidade + ", Valor Unitário: " + valorUnitario + ", Total: " + total;
     }
-
 }
+

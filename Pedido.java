@@ -13,16 +13,17 @@ public class Pedido{
     private List<Item> itens;
     private double valorTotal;
 
-  public Pedido(int id, Funcionario funcionarioSolicitante, Departamento departamentoSolicitante) {
+  public Pedido(int id, Funcionario date, Departamento funcionario) {
       this.id = id;
-      this.funcionarioSolicitante = funcionarioSolicitante;
-      this.departamentoSolicitante = departamentoSolicitante;
+      this.funcionarioSolicitante = date;
+      this.departamentoSolicitante = funcionario;
       this.dataPedido = new Date();
       this.dataConclusao = null; //
       this.itens = new ArrayList<>();
       this.status = StatusPedido.ABERTO;
       this.valorTotal = 0.0;
   }
+
 
     public int getId() {
         return id;

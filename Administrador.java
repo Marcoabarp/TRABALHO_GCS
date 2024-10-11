@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Date;
 public class Administrador extends Usuario {
     public Administrador(int id, String nome) {
-        super(id, nome, TipoUsuario.ADMINISTRADOR);
+        super(id, nome);
     }
 
     public void avaliarPedido(Pedido pedido, boolean aprovado) {
@@ -58,7 +58,7 @@ public class Administrador extends Usuario {
         System.out.println("Status: " + pedido.getStatus());
         System.out.println("Valor Total: " + pedido.getValorTotal());
         for (Item item : pedido.getItens()) {
-            System.out.println("- " + item.getDescricao() + ": " + item.getQuantidade() + " x " + item.getValorUnitario() + " = " + item.calcularTotal());
+            System.out.println("- " + item.getDescricao() + ": " + item.getQuantidade() + " x " + item.getValorUnitario() + " = " + item.calcularTotal(getId(), getId()));
         }
     }
 

@@ -5,6 +5,9 @@ public class Item {
     private double total;
 
 
+    public Item(String descricao, double valorUnitario, int quantidade) {
+
+
     public Item(String descricao, double valorUnitario, int quantidade, int id, Funcionario funcionarioSolicitante, Departamento departamentoSolicitante) {
         super(id, funcionarioSolicitante, departamentoSolicitante);
         this.descricao = descricao;
@@ -32,4 +35,15 @@ public class Item {
         total = valorUnitario * quantidade;
         return total;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "descricao='" + descricao + '\'' +
+                ", valorUnitario=" + valorUnitario +
+                ", quantidade=" + quantidade +
+                ", total=" + calcularTotal(valorUnitario, quantidade) + // Passa os parâmetros corretos
+                '}';
+    }
+
 }

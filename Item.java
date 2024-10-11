@@ -40,4 +40,5 @@ public class Item {
                 ", total=" + calcularTotal(valorUnitario, quantidade) + // Passa os parâmetros corretos
                 '}';
     }
+
 }
